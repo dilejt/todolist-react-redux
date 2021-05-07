@@ -1,0 +1,50 @@
+
+@import "~bootstrap/scss/bootstrap";
+
+.container{
+    margin-top: 50px;
+    label{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
+    }
+    .userPanel{
+        background-color:#ffffffd4;
+        border-radius: .25rem;
+        padding-bottom: 20px;
+        padding-top: 15px;
+    }
+    .card{
+        background-color:#ffffffd4;
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+    .float-right{
+        float: right !important;
+    }
+    #emptyTaskList{
+        height: 200px;
+    }
+
+    .categoryCheck{
+        > .categoryOn{
+            background-color: $warning;
+            color: $dark;
+        }
+        > .categoryOff{
+            background-color: $secondary;
+            color: $light;
+        }
+        > span{
+            > label{
+                user-select: none;
+            }
+            > div{
+                padding-left: 0 !important;
+                > input[id="priority"]{
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
