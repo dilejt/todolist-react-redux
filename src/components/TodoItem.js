@@ -6,7 +6,7 @@ export const TodoItem = (props) => {
             item.completed ?
                 item.priority ?
                 <Card.Body className="text-decoration-line-through bg-warning text-dark" key={item.id}>
-                    <Card.Title>{item.item}<small className="text-decoration-line-through float-right font-weight-lighter" style={{float: "right"}}>Priorytetowe</small></Card.Title>
+                    <Card.Title>{item.item}<small className="text-decoration-line-through float-right font-weight-lighter" style={{float: "right"}}>Priorytetowe<br />{item.category}</small></Card.Title>
                     <Card.Text>
                         {item.description}
                     </Card.Text>
@@ -15,7 +15,7 @@ export const TodoItem = (props) => {
                 </Card.Body>
                 :
                 <Card.Body className="text-decoration-line-through bg-info text-white" key={item.id}>
-                    <Card.Title>{item.item}</Card.Title>
+                    <Card.Title>{item.item}<small className="text-decoration-line-through float-right font-weight-lighter" style={{float: "right"}}>{item.category}</small></Card.Title>
                     <Card.Text>
                         {item.description}
                     </Card.Text>
@@ -25,7 +25,7 @@ export const TodoItem = (props) => {
             :
                 item.priority ?
                 <Card.Body className="bg-warning text-dark" key={item.id}>
-                    <Card.Title>{item.item}<small className="float-right font-weight-lighter" style={{float: "right"}}>Priorytetowe</small></Card.Title>
+                    <Card.Title>{item.item}<small className="float-right font-weight-lighter" style={{float: "right"}}>Priorytetowe<br />{item.category}</small></Card.Title>
                     <Card.Text>
                         {item.description}
                     </Card.Text>
@@ -34,7 +34,7 @@ export const TodoItem = (props) => {
                 </Card.Body>
                 :
                 <Card.Body className="bg-info text-white" key={item.id}>
-                    <Card.Title>{item.item}</Card.Title>
+                    <Card.Title>{item.item}<small className="float-right font-weight-lighter" style={{float: "right"}}>{item.category}</small></Card.Title>
                     <Card.Text>
                         {item.description}
                     </Card.Text>
